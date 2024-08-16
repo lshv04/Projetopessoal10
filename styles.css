@@ -1,34 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
 }
 
-.container,
-.pokemon,
-.namepokemon,
-.img1,
-.subtitle,
-.types,
-.type,
-.abilities,
-.ability {
-    border: 1px solid black;
-}
+
+
 
 img {
     max-height: 100%;
 
 }
 
+.img1 {
+    background-image: url("./img/background.jpg");
+    background-position: 10% 10%;
+    border: 2px solid black;
+}
+
 p {
     padding: 0;
     margin: 0;
+    font-weight: 500;
+
+}
+
+.id {
+    font-size: 1.5rem;
+    font-weight: 900;
 }
 
 .pokemon {
-    height: 500px;
+    height: 360px;
     padding: 1rem;
-    
+    border-radius: 8px;
+    transition: height 0.2s ease;
+    border: 1px solid black;
+}
+
+.capsule {
+    opacity: 0;
+    max-height: 0;
+
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.pokemon:hover {
+    height: 540px;
+
+}
+
+.pokemon:hover .capsule {
+    display: block;
+    opacity: 1;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* Alinha horizontalmente no centro */
+    align-items: center;
 }
 
 .img1 {
@@ -47,12 +84,16 @@ p {
     align-items: center;
     /* Alinha verticalmente no centro */
     gap: 1rem;
+    border: 2px solid black;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
+    font-style: italic;
+    margin-bottom: 1rem;
 }
 
 .types {
-    margin-top: 1rem;
+
+    gap: 1rem;
     display: flex;
     justify-content: center;
     /* Alinha horizontalmente no centro */
@@ -63,20 +104,298 @@ p {
 .type {
     border-radius: 16px;
     padding: 0.25rem 1rem;
+    filter: brightness(0.9);
 }
 
 .abilities {
-    margin-top:1rem;
+    margin-top: 1rem;
     text-align: center;
 }
-.ability{
+
+.ability {
     display: flex;
     justify-content: center;
     /* Alinha horizontalmente no centro */
     align-items: center;
-    gap:1rem;
+    border-bottom: solid 1px black;
+    gap: 1rem;
+
 }
-.pokeball{
-    height: 50px;
+
+.pokeball {
+    height: 75px;
     margin-top: 1.5rem;
 }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    /* Alinha horizontalmente no centro */
+    align-items: center;
+}
+
+/* bg-colors */
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-image: linear-gradient(305deg,
+            hsl(100deg 100% 25%) 0%,
+            hsl(100deg 91% 28%) 13%,
+            hsl(100deg 84% 31%) 26%,
+            hsl(100deg 76% 34%) 38%,
+            hsl(100deg 70% 37%) 50%,
+            hsl(100deg 64% 40%) 61%,
+            hsl(100deg 58% 44%) 72%,
+            hsl(100deg 53% 47%) 81%,
+            hsl(100deg 50% 51%) 90%,
+            hsl(101deg 52% 55%) 100%);
+}
+
+.fire {
+    background-image: linear-gradient(315deg,
+            hsl(25deg 79% 48%) 0%,
+            hsl(25deg 77% 49%) 13%,
+            hsl(25deg 76% 49%) 26%,
+            hsl(25deg 75% 50%) 38%,
+            hsl(25deg 77% 51%) 50%,
+            hsl(25deg 78% 52%) 61%,
+            hsl(25deg 80% 53%) 72%,
+            hsl(25deg 81% 54%) 81%,
+            hsl(25deg 83% 55%) 90%,
+            hsl(25deg 85% 56%) 100%);
+}
+
+.water {
+    background-image: linear-gradient(315deg,
+            hsl(222deg 14% 55%) 0%,
+            hsl(222deg 19% 57%) 13%,
+            hsl(222deg 24% 59%) 26%,
+            hsl(222deg 30% 60%) 38%,
+            hsl(222deg 36% 62%) 50%,
+            hsl(222deg 44% 63%) 61%,
+            hsl(222deg 52% 64%) 72%,
+            hsl(222deg 61% 65%) 81%,
+            hsl(222deg 70% 66%) 90%,
+            hsl(222deg 80% 67%) 100%);
+}
+
+.electric {
+    background-image: linear-gradient(315deg,
+            hsl(48deg 71% 53%) 0%,
+            hsl(48deg 73% 54%) 13%,
+            hsl(48deg 75% 54%) 26%,
+            hsl(48deg 78% 55%) 38%,
+            hsl(48deg 80% 55%) 50%,
+            hsl(48deg 82% 56%) 61%,
+            hsl(48deg 85% 56%) 72%,
+            hsl(48deg 87% 57%) 81%,
+            hsl(48deg 90% 57%) 90%,
+            hsl(48deg 93% 57%) 100%);
+}
+
+.ice {
+    background-image: linear-gradient(315deg,
+            hsl(182deg 84% 29%) 0%,
+            hsl(182deg 73% 32%) 13%,
+            hsl(182deg 63% 37%) 26%,
+            hsl(182deg 54% 41%) 38%,
+            hsl(182deg 47% 45%) 50%,
+            hsl(182deg 40% 50%) 61%,
+            hsl(182deg 41% 55%) 72%,
+            hsl(182deg 42% 61%) 81%,
+            hsl(182deg 43% 66%) 90%,
+            hsl(182deg 44% 72%) 100%);
+}
+
+.ground {
+    background-image: linear-gradient(315deg,
+            hsl(44deg 75% 47%) 0%,
+            hsl(44deg 70% 49%) 13%,
+            hsl(44deg 66% 51%) 26%,
+            hsl(44deg 66% 53%) 38%,
+            hsl(44deg 66% 55%) 50%,
+            hsl(44deg 66% 56%) 61%,
+            hsl(44deg 66% 58%) 72%,
+            hsl(44deg 66% 60%) 81%,
+            hsl(44deg 65% 62%) 90%,
+            hsl(44deg 65% 64%) 100%);
+}
+
+.flying {
+    background-image: linear-gradient(315deg,
+            hsl(256deg 46% 57%) 0%,
+            hsl(256deg 48% 59%) 13%,
+            hsl(256deg 51% 61%) 26%,
+            hsl(256deg 53% 63%) 38%,
+            hsl(256deg 56% 65%) 50%,
+            hsl(256deg 59% 67%) 61%,
+            hsl(256deg 63% 69%) 72%,
+            hsl(256deg 67% 71%) 81%,
+            hsl(256deg 71% 73%) 90%,
+            hsl(256deg 76% 75%) 100%);
+}
+
+.poison {
+    background-image: linear-gradient(315deg,
+            hsl(300deg 95% 44%) 0%,
+            hsl(300deg 87% 44%) 13%,
+            hsl(300deg 80% 45%) 26%,
+            hsl(300deg 74% 45%) 38%,
+            hsl(300deg 68% 45%) 50%,
+            hsl(300deg 62% 45%) 61%,
+            hsl(300deg 57% 45%) 72%,
+            hsl(300deg 52% 45%) 81%,
+            hsl(300deg 47% 44%) 90%,
+            hsl(300deg 43% 44%) 100%);
+}
+
+.fighting {
+    background-image: linear-gradient(315deg,
+            hsl(3deg 28% 63%) 0%,
+            hsl(3deg 32% 61%) 13%,
+            hsl(3deg 35% 59%) 26%,
+            hsl(3deg 39% 57%) 38%,
+            hsl(3deg 42% 55%) 50%,
+            hsl(3deg 45% 53%) 61%,
+            hsl(3deg 47% 51%) 72%,
+            hsl(3deg 51% 49%) 81%,
+            hsl(3deg 57% 47%) 90%,
+            hsl(3deg 65% 45%) 100%);
+}
+
+.psychic {
+    background-image: linear-gradient(315deg,
+            hsl(342deg 79% 45%) 0%,
+            hsl(342deg 75% 47%) 13%,
+            hsl(342deg 71% 50%) 26%,
+            hsl(342deg 72% 52%) 38%,
+            hsl(342deg 74% 54%) 50%,
+            hsl(342deg 77% 56%) 61%,
+            hsl(342deg 80% 58%) 72%,
+            hsl(342deg 83% 60%) 81%,
+            hsl(342deg 86% 63%) 90%,
+            hsl(342deg 90% 65%) 100%);
+}
+
+.dark {
+    background-image: linear-gradient(315deg,
+            hsl(24deg 33% 12%) 0%,
+            hsl(24deg 32% 14%) 13%,
+            hsl(24deg 31% 17%) 26%,
+            hsl(24deg 30% 20%) 38%,
+            hsl(24deg 29% 22%) 50%,
+            hsl(24deg 28% 25%) 61%,
+            hsl(24deg 26% 28%) 72%,
+            hsl(24deg 25% 31%) 81%,
+            hsl(24deg 24% 33%) 90%,
+            hsl(24deg 23% 36%) 100%);
+}
+
+.rock {
+    background-image: linear-gradient(315deg,
+            hsl(49deg 41% 54%) 0%,
+            hsl(49deg 42% 53%) 13%,
+            hsl(49deg 42% 52%) 26%,
+            hsl(49deg 43% 51%) 38%,
+            hsl(49deg 44% 51%) 50%,
+            hsl(49deg 45% 50%) 61%,
+            hsl(49deg 47% 49%) 72%,
+            hsl(49deg 49% 48%) 81%,
+            hsl(49deg 52% 48%) 90%,
+            hsl(49deg 54% 47%) 100%);
+}
+
+.bug {
+    background-image: linear-gradient(315deg,
+            hsl(66deg 71% 63%) 0%,
+            hsl(66deg 68% 61%) 13%,
+            hsl(66deg 65% 58%) 26%,
+            hsl(66deg 63% 56%) 38%,
+            hsl(66deg 61% 53%) 50%,
+            hsl(66deg 58% 51%) 61%,
+            hsl(66deg 59% 49%) 72%,
+            hsl(66deg 63% 46%) 81%,
+            hsl(66deg 66% 44%) 90%,
+            hsl(66deg 70% 42%) 100%);
+}
+
+.ghost {
+    background-image: linear-gradient(315deg,
+            hsl(262deg 83% 34%) 0%,
+            hsl(261deg 74% 36%) 13%,
+            hsl(261deg 66% 37%) 26%,
+            hsl(261deg 59% 39%) 38%,
+            hsl(261deg 52% 40%) 50%,
+            hsl(261deg 46% 41%) 61%,
+            hsl(261deg 41% 43%) 72%,
+            hsl(261deg 35% 44%) 81%,
+            hsl(261deg 31% 45%) 90%,
+            hsl(261deg 26% 47%) 100%);
+}
+
+.steel {
+    background-image: linear-gradient(315deg,
+            hsl(252deg 11% 91%) 0%,
+            hsl(251deg 13% 89%) 13%,
+            hsl(250deg 15% 88%) 26%,
+            hsl(250deg 17% 86%) 38%,
+            hsl(249deg 18% 84%) 50%,
+            hsl(248deg 18% 83%) 61%,
+            hsl(247deg 19% 81%) 72%,
+            hsl(247deg 19% 80%) 81%,
+            hsl(246deg 20% 78%) 90%,
+            hsl(245deg 20% 76%) 100%);
+}
+
+.dragon {
+    background-image: linear-gradient(315deg,
+            hsl(257deg 39% 21%) 0%,
+            hsl(257deg 41% 26%) 13%,
+            hsl(257deg 44% 31%) 26%,
+            hsl(257deg 46% 35%) 38%,
+            hsl(257deg 49% 40%) 50%,
+            hsl(257deg 51% 44%) 61%,
+            hsl(257deg 54% 48%) 72%,
+            hsl(257deg 62% 52%) 81%,
+            hsl(257deg 75% 56%) 90%,
+            hsl(257deg 91% 59%) 100%);
+}
+
+.fairy {
+    background-image: linear-gradient(315deg,
+            hsl(340deg 82% 52%) 0%,
+            hsl(340deg 82% 55%) 13%,
+            hsl(340deg 83% 58%) 26%,
+            hsl(340deg 83% 62%) 38%,
+            hsl(340deg 83% 65%) 50%,
+            hsl(340deg 84% 69%) 61%,
+            hsl(340deg 84% 72%) 72%,
+            hsl(340deg 85% 76%) 81%,
+            hsl(340deg 85% 79%) 90%,
+            hsl(340deg 86% 83%) 100%);
+}
+
+
+@media (max-width:1025px) {
+    .pokemon {
+        height: 540px;
+    }
+
+    .capsule {
+        opacity: 1;
+    }
+
+
+  
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+ p{
+    font-size: 0.8rem;
+ }
+
+  }
+  
+
+
