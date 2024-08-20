@@ -10,7 +10,7 @@ body {
 }
 
 
-.row{
+.row {
     display: flex;
     justify-content: center;
 }
@@ -20,11 +20,91 @@ img {
 
 }
 
+/* grass */
 .img1 {
     background-image: url("./img/background.jpg");
-    background-position: 10% 10%;
+    background-position:contain;
+    background-size: cover;
     border: 2px solid black;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+
+/* water */
+.img2 {
+    background-image: url("./img/backgroundwater.jpg");
+    background-position:contain;
+    background-size: cover;
+    border: 2px solid black;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* eletric */
+.img3 {
+    background-image: url("./img/backgroundeletric.jpg");
+    background-position:contain;
+    background-size: cover;
+    border: 2px solid black;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fire */
+.img4 {
+    background-image: url("./img/backgroundfire.jpg");
+    background-position:contain;
+    background-size: cover;
+    border: 2px solid black;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ground */
+.img5 {
+    background-image: url("./img/backgroundground.jpg");
+    background-position:contain;
+    background-size: cover;
+    border: 2px solid black;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* psychic */
+.img6 {
+    background-image: url("./img/backgroundpsychic.jpg");
+    background-position:contain;
+    background-size: cover;
+    border: 2px solid black;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* dragon */
+.img7 {
+    background-image: url("./img/backgrounddragon.jpg");
+    background-position:contain;
+    background-size: cover;
+    border: 2px solid black;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 p {
     padding: 0;
@@ -71,14 +151,8 @@ p {
     align-items: center;
 }
 
-.img1 {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    /* Alinha horizontalmente no centro */
-    align-items: center;
-    /* Alinha verticalmente no centro */
-}
+
+
 
 .subtitle {
     display: flex;
@@ -269,17 +343,17 @@ p {
 }
 
 .psychic {
-    background-image: linear-gradient(315deg,
-            hsl(342deg 79% 45%) 0%,
-            hsl(342deg 75% 47%) 13%,
-            hsl(342deg 71% 50%) 26%,
-            hsl(342deg 72% 52%) 38%,
-            hsl(342deg 74% 54%) 50%,
-            hsl(342deg 77% 56%) 61%,
-            hsl(342deg 80% 58%) 72%,
-            hsl(342deg 83% 60%) 81%,
-            hsl(342deg 86% 63%) 90%,
-            hsl(342deg 90% 65%) 100%);
+    background-image: linear-gradient(130deg,
+            hsl(297deg 66% 72%) 0%,
+            hsl(297deg 51% 66%) 29%,
+            hsl(298deg 41% 59%) 46%,
+            hsl(298deg 34% 53%) 58%,
+            hsl(298deg 33% 46%) 67%,
+            hsl(298deg 37% 40%) 74%,
+            hsl(298deg 41% 34%) 79%,
+            hsl(297deg 48% 28%) 85%,
+            hsl(297deg 59% 22%) 91%,
+            hsl(297deg 83% 16%) 100%);
 }
 
 .dark {
@@ -353,17 +427,17 @@ p {
 }
 
 .dragon {
-    background-image: linear-gradient(315deg,
-            hsl(257deg 39% 21%) 0%,
-            hsl(257deg 41% 26%) 13%,
-            hsl(257deg 44% 31%) 26%,
-            hsl(257deg 46% 35%) 38%,
-            hsl(257deg 49% 40%) 50%,
-            hsl(257deg 51% 44%) 61%,
-            hsl(257deg 54% 48%) 72%,
-            hsl(257deg 62% 52%) 81%,
-            hsl(257deg 75% 56%) 90%,
-            hsl(257deg 91% 59%) 100%);
+    background-image: linear-gradient(130deg,
+            hsl(257deg 82% 57%) 0%,
+            hsl(258deg 82% 60%) 29%,
+            hsl(258deg 82% 62%) 46%,
+            hsl(258deg 81% 65%) 58%,
+            hsl(259deg 80% 67%) 67%,
+            hsl(259deg 79% 69%) 74%,
+            hsl(258deg 78% 71%) 79%,
+            hsl(258deg 77% 73%) 85%,
+            hsl(258deg 76% 75%) 91%,
+            hsl(257deg 74% 77%) 100%);
 }
 
 .fairy {
@@ -383,7 +457,7 @@ p {
 
 @media (max-width:1025px) {
     .pokemon {
-        height: 540px;
+        height: 560px;
     }
 
     .capsule {
@@ -391,14 +465,12 @@ p {
     }
 
 
-  
+
 }
+
 @media (min-width: 768px) and (max-width: 1025px) {
- p{
-    font-size: 0.8rem;
- }
+    p {
+        font-size: 0.8rem;
+    }
 
-  }
-  
-
-
+}
