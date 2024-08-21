@@ -7,37 +7,37 @@ function getImageForType(type) {
   let img;
 
   switch (type) {
-    case 'grass':
-    case 'bug':
-    case 'normal':
-    case 'poison':
-    case 'fairy':
-      img = 'img1';
+    case "grass":
+    case "bug":
+    case "normal":
+    case "poison":
+    case "fairy":
+      img = "img1";
       break;
-    case 'water':
-    case 'ice':
-      img = 'img2';
+    case "water":
+    case "ice":
+      img = "img2";
       break;
-    case 'electric':
-      img = 'img3';
+    case "electric":
+      img = "img3";
       break;
-    case 'fire':
-      img = 'img4';
+    case "fire":
+      img = "img4";
       break;
-    case 'ground':
-    case 'fighting':
-    case 'rock':
-      img = 'img5';
+    case "ground":
+    case "fighting":
+    case "rock":
+      img = "img5";
       break;
-    case 'psychic':
-    case 'ghost':
-      img = 'img6';
+    case "psychic":
+    case "ghost":
+      img = "img6";
       break;
-    case 'dragon':
-      img = 'img7';
+    case "dragon":
+      img = "img7";
       break;
     default:
-      img = 'defaultImg'; // Valor padrão se o input não corresponder a nenhum caso
+      img = "defaultImg"; 
       break;
   }
 

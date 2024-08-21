@@ -1,14 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
 
 * {
-    font-family: "Roboto", sans-serif;
+    font-family: "New Amsterdam", sans-serif;
 }
 
 body {
     margin: 0;
-    padding: 1rem;
+    padding: 0 1rem;
+    background-color: #212529;
+
 }
 
+header {
+    border: 1px solid black;
+    height: 5rem;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    background-color: #d7253d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 5rem !important;
+}
+
+.pokegrid {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    background-color: #f1f1f1;
+    border-radius: 60px;
+}
+
+.pokedex {
+    margin-right: 1rem;
+    ;
+    height: 55px;
+}
+
+.pokedexicon {
+    display: flex;
+    flex-direction: row;
+}
+
+.bi-list {
+    font-size: 3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.bi-x {
+    color: #fff;
+    font-size: 2.5rem;
+    background-color: #212529;
+
+}
+
+button {
+    border: none;
+    background-color: #212529;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
 
 .row {
     display: flex;
@@ -20,12 +78,17 @@ img {
 
 }
 
+.offcanvas-header {
+    align-items: center;
+    justify-content: space-between;
+}
+
 /* grass */
 .img1 {
     background-image: url("./img/background.jpg");
-    background-position:contain;
+    background-position: contain;
     background-size: cover;
-    border: 2px solid black;
+    border: 1px solid black;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -36,9 +99,9 @@ img {
 /* water */
 .img2 {
     background-image: url("./img/backgroundwater.jpg");
-    background-position:contain;
+    background-position: contain;
     background-size: cover;
-    border: 2px solid black;
+    border: 1px solid black;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -48,9 +111,9 @@ img {
 /* eletric */
 .img3 {
     background-image: url("./img/backgroundeletric.jpg");
-    background-position:contain;
+    background-position: contain;
     background-size: cover;
-    border: 2px solid black;
+    border: 1px solid black;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -60,9 +123,9 @@ img {
 /* fire */
 .img4 {
     background-image: url("./img/backgroundfire.jpg");
-    background-position:contain;
+    background-position: contain;
     background-size: cover;
-    border: 2px solid black;
+    border: 1px solid black;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -72,9 +135,9 @@ img {
 /* ground */
 .img5 {
     background-image: url("./img/backgroundground.jpg");
-    background-position:contain;
+    background-position: contain;
     background-size: cover;
-    border: 2px solid black;
+    border: 1px solid black;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -84,9 +147,9 @@ img {
 /* psychic */
 .img6 {
     background-image: url("./img/backgroundpsychic.jpg");
-    background-position:contain;
+    background-position: contain;
     background-size: cover;
-    border: 2px solid black;
+    border: 1px solid black;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -96,9 +159,9 @@ img {
 /* dragon */
 .img7 {
     background-image: url("./img/backgrounddragon.jpg");
-    background-position:contain;
+    background-position: contain;
     background-size: cover;
-    border: 2px solid black;
+    border: 1px solid black;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -129,7 +192,6 @@ p {
 .capsule {
     opacity: 0;
     max-height: 0;
-
     transition: opacity 0.5s ease, max-height 0.5s ease;
 }
 
@@ -147,21 +209,15 @@ p {
 .header {
     display: flex;
     justify-content: space-between;
-    /* Alinha horizontalmente no centro */
     align-items: center;
 }
-
-
-
 
 .subtitle {
     display: flex;
     justify-content: center;
-    /* Alinha horizontalmente no centro */
     align-items: center;
-    /* Alinha verticalmente no centro */
     gap: 1rem;
-    border: 2px solid black;
+    border: 1px solid black;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
     font-style: italic;
@@ -169,13 +225,10 @@ p {
 }
 
 .types {
-
     gap: 1rem;
     display: flex;
     justify-content: center;
-    /* Alinha horizontalmente no centro */
     align-items: center;
-    /* Alinha verticalmente no centro */
 }
 
 .type {
@@ -187,27 +240,25 @@ p {
 .abilities {
     margin-top: 1rem;
     text-align: center;
+    border-bottom: solid 1px black;
 }
 
 .ability {
     display: flex;
     justify-content: center;
-    /* Alinha horizontalmente no centro */
     align-items: center;
-    border-bottom: solid 1px black;
     gap: 1rem;
 
 }
 
 .pokeball {
-    height: 75px;
+    height: 4.6875rem;
     margin-top: 1.5rem;
 }
 
 .footer {
     display: flex;
     justify-content: space-between;
-    /* Alinha horizontalmente no centro */
     align-items: center;
 }
 
@@ -464,13 +515,27 @@ p {
         opacity: 1;
     }
 
+    header {
+
+        padding: 0 1rem !important;
+    }
 
 
 }
 
 @media (min-width: 768px) and (max-width: 1025px) {
     p {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
+}
+
+@media (max-width:768px) {
+    .pokegrid {
+        margin-top: 0;
+        padding: 0 0.5rem;
+        border-top: none;
+        background-color: #212529;
+        border-radius: 60px;
+    }
 }
