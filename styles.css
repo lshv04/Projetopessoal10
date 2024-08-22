@@ -12,6 +12,7 @@ body {
 }
 
 header {
+   
     border: 1px solid black;
     height: 5rem;
     border-bottom-right-radius: 60px;
