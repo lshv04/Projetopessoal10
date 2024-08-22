@@ -25,8 +25,12 @@ Excelente oportunidade para praticar minhas habilidades em JavaScript e utilizar
   
 
 
+https://github.com/user-attachments/assets/035af61d-5e26-4937-b14b-03f19813f735
 
-![Descrição do GIF](./img/Recording%202024-08-22%20094016.mp4)
+
+
+
+
 
 ![alt text](./img/image.png)  
 ![alt text](./img/image-1.png)  
