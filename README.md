@@ -61,7 +61,7 @@ https://github.com/user-attachments/assets/035af61d-5e26-4937-b14b-03f19813f735
       
 ## 📁 Acesso ao projeto  
 
-[Veja o projeto final do curso em funcionamento](https://lshv04.github.io/Projetopessoal10/).  
+[Veja o projeto final do curso em funcionamento](https://lshv04.github.io/pokedexApi-10/).  
 
 
 
